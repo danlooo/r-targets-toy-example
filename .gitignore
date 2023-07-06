@@ -7,4 +7,5 @@
 !.gitkeep
 !_targets.yaml
 !*.Rproj
+!*.md
 !src/**
