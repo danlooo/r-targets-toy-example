@@ -1,0 +1,10 @@
+# white list approach
+*
+!*/
+
+# include
+!.gitignore
+!.gitkeep
+!_targets.yaml
+!*.Rproj
+!src/**

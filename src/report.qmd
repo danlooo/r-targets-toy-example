@@ -1,0 +1,27 @@
+# R targets toy example
+
+```{r setup}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+Visualize the workflow as a dependency tree of steps, i.e. the individual targets:
+
+```{r}
+source("src/_targets.R")
+
+tar_visnetwork()
+```
+
+Load an individual target as a table with one row per branch (i.e. sample):
+
+```{r}
+tar_load(shell_calls)
+shell_calls
+```
+
+
+```{r}
+shell_calls |>
+  select(sample_id, sha1_checksums) |>
+  unnest_wider(sha1_checksums)
+```
