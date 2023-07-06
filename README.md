@@ -7,6 +7,7 @@ This project provides a minimal working example to demonstrate multi-step analys
 - Write a complex analysis workflow, one step at a time
 - Apply a function across all samples
 - Combine results from multiple samples into a single plot
+- Run shell commands as targets, also with docker
 
 ## Get Started
 
