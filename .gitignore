@@ -7,6 +7,7 @@
 !.gitkeep
 !_targets.yaml
 !*.Rproj
+!.Rprofile
 !*.md
 !src/**
 !renv.lock

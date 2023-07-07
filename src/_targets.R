@@ -1,15 +1,5 @@
 #!/usr/bin/env R
 
-# setup ----
-
-library(tidyverse)
-library(targets)
-
-# load library scripts
-list.files("src", recursive = TRUE, pattern = ".R$", full.names = TRUE) |>
-  discard(~ .x == "src/_targets.R") |>
-  map(source)
-
 list(
   # import external raw data files ----
   tar_target(samples_file, "raw/samples.csv", format = "file"),
@@ -66,7 +56,7 @@ list(
   # Perform shell commands ----
   tar_target(
     name = shell_calls,
-    pattern = map(samples), # for each sample
+    pattern = head(samples, 3), # for each first 3 samples
     # Use column names in the syntax of str_glue to create shell commands
     command = shell_call(samples, "echo {SampleID} > name.txt; hostname > host.txt", docker = "ubuntu:22.04")
   ),
