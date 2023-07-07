@@ -9,3 +9,4 @@
 !*.Rproj
 !*.md
 !src/**
+!renv.lock
