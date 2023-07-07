@@ -11,6 +11,12 @@ This project provides a minimal working example to demonstrate multi-step analys
 
 ## Get Started
 
+```bash
+git clone https://github.com/danlooo/r-targets-toy-example/
+cd r-targets-toy-example
+make
+```
+
 Open The R project at the root directory and this repository e.g. with RStudio and run the following code in the R console:
 
 ```r
